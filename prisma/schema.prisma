@@ -55,7 +55,7 @@ model Journal {
   id       String    @id @default(cuid())
   name     String    @unique
   slug     String    @unique
-  rssUrl   String
+  rssUrl   String?
   homeUrl  String
   articles Article[]
 }

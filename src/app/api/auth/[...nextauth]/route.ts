@@ -13,9 +13,6 @@ const handler = NextAuth({
       clientSecret: process.env.GOOGLE_CLIENT_SECRET!,
     }),
   ],
-  pages: {
-    signIn: "/login",
-  },
   callbacks: {
     session({ session, user }) {
       if (session.user) (session.user as any).id = user.id

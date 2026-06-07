@@ -11,7 +11,12 @@ async function main() {
   console.log("[poll] starting daily poll", new Date().toISOString())
 
   await pollAllJournals()
-  await ingestScholarAlerts()
+
+  if (process.env.SCHOLAR_GMAIL_REFRESH_TOKEN) {
+    await ingestScholarAlerts()
+  } else {
+    console.log("[poll] skipping Scholar alerts — SCHOLAR_GMAIL_REFRESH_TOKEN not set")
+  }
 
   console.log("[poll] done", new Date().toISOString())
   await prisma.$disconnect()

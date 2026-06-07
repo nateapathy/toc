@@ -3,6 +3,8 @@
  * Protect with a shared secret in the Authorization header.
  */
 import { NextRequest, NextResponse } from "next/server"
+
+export const dynamic = "force-dynamic"
 import { pollAllJournals } from "@/lib/journals/poll-rss"
 import { ingestScholarAlerts } from "@/lib/gmail/parse-scholar"
 

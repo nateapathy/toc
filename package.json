@@ -1,0 +1,31 @@
+{
+  "name": "toc-tracker",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "db:push": "prisma db push",
+    "db:studio": "prisma studio",
+    "poll": "tsx src/lib/poll.ts"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.14.0",
+    "next": "^14.2.4",
+    "next-auth": "^4.24.7",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "rss-parser": "^3.13.0",
+    "googleapis": "^140.0.0",
+    "date-fns": "^3.6.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "prisma": "^5.14.0",
+    "tsx": "^4.15.6",
+    "typescript": "^5"
+  }
+}
